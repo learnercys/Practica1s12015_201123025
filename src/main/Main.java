@@ -8,8 +8,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    public final String APP_TITLE = "Plantas y Zombies";
-    public final String APP_MAIN_FILE = "fxml/main.fxml";
+    public static final String APP_TITLE = "Plantas y Zombies";
+    public static final String APP_MAIN_FILE = "fxml/main.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
@@ -18,7 +18,6 @@ public class Main extends Application {
         primaryStage.setScene( new Scene(root) );
         primaryStage.show();
     }
-
 
     public static void main(String[] args) {
         launch(args);

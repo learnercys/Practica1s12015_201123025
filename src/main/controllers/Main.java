@@ -7,6 +7,12 @@ package main.controllers;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class Main {
 
@@ -18,6 +24,11 @@ public class Main {
     @FXML
     public void handlePlantsPlayer( ActionEvent event ) {
         System.out.println("handlePlantsPlayer");
+        try {
+            this.showPlayerConfiguration( "plant");
+        } catch ( IOException ex ) {
+            System.out.println("something bad happened");
+        }
     }
 
     /**
@@ -28,6 +39,11 @@ public class Main {
     @FXML
     public void handleZombiesPlayer( ActionEvent event ) {
         System.out.println("handleZombiesPlayer");
+        try {
+            this.showPlayerConfiguration( "zombie" );
+        } catch ( IOException ex ) {
+            System.out.println("something bad happened");
+        }
     }
 
     /**
@@ -48,6 +64,15 @@ public class Main {
     @FXML
     public void handleDeleteData ( ActionEvent event ) {
         System.out.println("handleDeleteData");
+    }
+
+    private void showPlayerConfiguration ( String type ) throws IOException{
+
+        Parent playerConfigurationWindow = FXMLLoader.load( getClass().getResource("../fxml/playerConfigurations.fxml") );
+        Stage stage = new Stage();
+        stage.setTitle(main.Main.APP_TITLE);
+        stage.setScene( new Scene( playerConfigurationWindow ) );
+        stage.show();
     }
 
 }
