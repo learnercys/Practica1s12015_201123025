@@ -1,0 +1,19 @@
+.h1 {
+    -fx-text-alignment: center;
+}
+
+.h1 {
+    -fx-font-size: 19px;
+}
+
+.h3 {
+    -fx-font-size: 17px;
+}
+
+.h5 {
+    -fx-font-size: 15px;
+}
+
+.h6 {
+    -fx-font-size: 13px;
+}

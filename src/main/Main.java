@@ -9,12 +9,13 @@ import javafx.stage.Stage;
 public class Main extends Application {
 
     public final String APP_TITLE = "Plantas y Zombies";
+    public final String APP_MAIN_FILE = "fxml/main.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("fxml/main.fxml"));
-        primaryStage.setTitle(APP_TITLE);
-        primaryStage.setScene(new Scene(root));
+        Parent root = FXMLLoader.load(getClass().getResource( APP_MAIN_FILE ));
+        primaryStage.setTitle( APP_TITLE );
+        primaryStage.setScene( new Scene(root) );
         primaryStage.show();
     }
 
